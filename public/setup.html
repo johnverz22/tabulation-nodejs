@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tabulation Setup Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+      margin: 20px;
+    }
+
+    .card {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="display-4">Tabulation Setup Page</h1>
+        <div class="row mt-5">
+            <!-- First Column -->
+            <div class="col-md-7">
+                <!-- Segments Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Segments</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="segmentForm">
+                            <div class="form-group">
+                                <label for="segmentName">Competition</label>
+                                <input type="text" class="form-control" id="segmentName" name="segmentName" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add Comptetion</button>
+                        </form>
+                        <table class="table mt-4" id="segmentsTable">
+                            <thead>
+                                <tr>
+                                    <th>Competition Name</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Table rows will be added dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Criteria Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Criteria</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="criteriaForm">
+                            <div class="form-group">
+                                <label for="segmentSelect">Competition</label>
+                                <select class="form-control" id="segmentSelect" name="segmentId" required>
+                                    <!-- Options will be dynamically added using JavaScript -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="criteriaName">Title</label>
+                                <input type="text" class="form-control" id="criteriaName" name="criteriaName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="criteriaPercent">Percent</label>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" id="criteriaPercent" name="criteriaPercent" required>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add Criteria</button>
+                        </form>
+                        <div id="criteriaTable">
+                            <!-- Contents are dynamic -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Second Column -->
+            <div class="col-md-5">
+                <!-- General Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5>General</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="generalForm">
+                            <div class="form-group">
+                                <label for="title">Event Title</label>
+                                <input type="text" class="form-control" id="title" name="title" required readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="candidatesCount">Number of Candidates</label>
+                                <div class="form-group">
+                                    <input type="number" class="form-control" id="candidatesCount" name="candidatesCount" required readonly>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" >Edit</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Judges Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Judges</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="judgesForm">
+                            <div class="form-row">
+                                <div class="col-8">
+                                    <label class="sr-only" for="numberOfJudges">Judges</label>
+                                    <input type="number" class="form-control mb-2" id="numberOfJudges" name="numberOfJudges">
+                                </div>
+                                <div class="col-4">
+                                    <button type="submit" class="btn btn-primary mb-2">Generate</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- Display the generated judges -->
+                        <div id="judgesTable">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Number</th>
+                                        <th scope="col">PIN</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="judgesTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- Setup Default Score -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Generate Default Scores</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="mx-auto">
+                                <button type="button" id="generateScore" class="btn btn-info mb-2">Generate</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- <div class="card">
+                    <div class="card-header">
+                        <h5>Generate Top 5</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="mx-auto">
+                                <button type="button" id="generateTop5" class="btn btn-info mb-2">Generate</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/setup.js"></script>
+</body>
+
+</html>

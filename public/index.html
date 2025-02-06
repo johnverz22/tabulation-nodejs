@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Pageant Tabulation</title>
+    <style>
+        body {
+      position: relative;
+      margin-bottom: 60px; /* Adjust the margin to accommodate the logout link */
+    }
+
+    #logout {
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="jumbotron pb-5">
+            <h1 class="display-4 text-center">Event Title</h1>
+            <h3 class="text-center" id="judge-text">Judge No 1</h3>
+        </div>
+        <!-- Segment Name -->
+        <h3 id="segmentName" class="text-center mt-4 mb-4 text-uppercase">Segment</h3>
+        <!-- Candidate Navigation -->
+        
+        <nav aria-label="Candidates" class="mb-4">
+            <ul class="pagination pagination-lg justify-content-center" id="candidatePagination">
+                <!-- Pagination buttons will be added here dynamically -->
+            </ul>
+        </nav>
+        <!-- Scoresheet Content -->
+        <div id="scoresheet">
+            <!-- Static scoresheet content for demonstration purposes -->
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- List of criterias with sliders -->
+                    <!-- <h3>Criterias</h3> -->
+                    <div id="criteriaSliders">
+                        <!-- Sliders will be added here dynamically -->
+                    </div>
+
+                    <div class="row">
+                        <div class="offset-md-9 col-md-3">
+                          <h1> <span id="scoreTotal" class="badge badge-warning slider-value float-right">0</span></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="logout">
+            <a href="#" id="logoutLink">Logout</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

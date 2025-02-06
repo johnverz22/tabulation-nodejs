@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Tabulation Login</title>
+    <style>
+
+        body {
+            padding-top:170px;
+        }
+
+        .form-control-square {
+          height: 100px; 
+          width: 100px; 
+          font-size: 50px;
+          text-align: center;
+        }
+
+       
+  </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center display-4">Welcome Judge!</h1>
+        <h2 class="text-center lead">Please enter PIN...</h2>
+        <form id="pinForm" class="text-center mt-5">
+            <div class="form-row justify-content-center">
+                <div class="form-group col-md-2">
+                    <input type="text" class="form-control form-control-square" id="digit1" maxlength="1" required autofocus>
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" class="form-control form-control-square" id="digit2" maxlength="1" required>
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" class="form-control form-control-square" id="digit3" maxlength="1" required>
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" class="form-control form-control-square" id="digit4" maxlength="1" required>
+                </div>
+
+            </div>
+            <div class="form-group col-md-3 mx-auto mt-5">
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </div>
+            
+        </form>
+    </div>
+    <script type="text/javascript" src="js/login.js"></script>
+</body>
+
+</html>
