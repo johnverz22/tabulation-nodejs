@@ -1,6 +1,3 @@
-
-
-```markdown
 # Tabulation WebApp
 
 This is a Node.js application designed to manage and display results for a judging system. It includes endpoints for viewing the judging page, controlling the results, and setting up configurations.
